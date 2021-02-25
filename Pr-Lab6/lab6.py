@@ -1,0 +1,11 @@
+try:
+    text, add_text = open("27.txt", "r"), open("27.txt", "r")
+    text_symbols = list(text.read())
+    odd_symbols = "".join(text_symbols[1::2])
+    pair_symbols = "".join(text_symbols[::2])
+    intersection_symbol = set(pair_symbols.lower()) & set(odd_symbols.lower())
+    with open("271.txt", "w", encoding='utf-8') as output: output.write(odd_symbols)
+    with open("272.txt", "w", encoding='utf-8') as output: output.write(pair_symbols)
+    with open("273.txt", "w", encoding='cp1251') as output: output.write(" ".join(intersection_symbol))
+    with open("274.txt", "w", encoding='utf-8') as output: output.write(" ".join(set(add_text.read().lower()) - intersection_symbol))
+except IOError: print("Error: File does not exist.")
