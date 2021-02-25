@@ -286,7 +286,9 @@ else:
 </details>
 
 <h3 align="center">Lab 6</h3> 
-Read the file "27.txt" and divide it into 2 files "271.txt", "272.txt", which contain odd and even numbered characters of the original file. Perform an "&" operation on the character sets of these files. Save the resulting file "273.txt" in the encoding "cp1251". Create a file from characters that are present in the file "27.txt" but not in "273.txt". Save this file in UTF-8 encoding. ([Open txt file](Pr-Lab6/27.txt))
+Read the file "27.txt" and divide it into 2 files "271.txt", "272.txt", which contain odd and even numbered characters of the original file. Perform an "&" operation on the character sets of these files. Save the resulting file "273.txt" in the encoding "cp1251". Create a file from characters that are present in the file "27.txt" but not in "273.txt". Save this file in UTF-8 encoding. 
+
+[Open txt file](Pr-Lab6/27.txt)
 
 <details>
   <summary>Solution</summary><p align="left">
@@ -305,4 +307,3 @@ try:
 except IOError: print("Error: File does not exist.")
 ```
 </details>
-
