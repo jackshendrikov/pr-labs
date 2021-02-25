@@ -8,8 +8,9 @@
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
- from math import sin, pow
+
+```python
+from math import sin, pow
 
 while True:
     try:
@@ -27,15 +28,15 @@ while True:
         else:
             print("F ≈ ", round(result, 6))
             break
-
-  ```
+```
 </details>
 
 <b>Task 2:</b> Enter the current time from the keyboard and determine the time of day (am - from 0 to 12:00, pm - from 12:00 to 24:00) in Kyiv, London and New York.
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
+
+```python
 from datetime import timedelta, datetime
 
 while True:
@@ -72,9 +73,7 @@ while True:
         print("Difference between London and New York -", London.hour - NewYork.hour, "hours")
 
         break
-
-
-  ```
+```
 </details>
 
 
@@ -84,7 +83,8 @@ Print sequence elements.
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
+
+```python
 while True:
     try:
         n = int(input("Enter N: "))
@@ -101,7 +101,7 @@ while True:
                     i = 10
                 print(i)
             break
-  ```
+```
 </details>
 
 <h3 align="center">Lab 2</h3> 
@@ -109,23 +109,24 @@ while True:
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
- new_line = input(str("Enter sequence of symbols: "))
+
+```python
+new_line = input(str("Enter sequence of symbols: "))
 print(new_line.split()[-2])
-  ```
+```
 </details>
 
 <b>Task 2:</b> Enter a sequence of characters. Print all words containing the sequence as separate character lists (without spaces). 
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
+
+```python
 line = bytes(input('Enter sequence of symbols : '), 'utf-8')
 
 for i in line.split():
     print(list("%s" % ''.join(i.decode("utf-8"))))
-
-  ```
+```
 </details>
 
 <h3 align="center">Lab 3</h3> 
@@ -133,8 +134,9 @@ for i in line.split():
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
- from random import randrange
+
+```python
+from random import randrange
 try:
     size = int(input("Enter array size: "))
 except ValueError:
@@ -154,14 +156,15 @@ else:
 
     print("New List: ", list(map(lambda x: x, b)), '\n' + '-'*50)
     print('Sum of elements in list - ', sum(b))
-  ```
+```
 </details>
 
 <b>Task 2:</b> Generate a matrix A of dimension m × m from random elements that are two-digit integers. Find the maximum element on the main diagonal and divide by this element all the elements of the matrix, except himself.
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
+
+```python
 from random import randrange
 from numpy import array, diagonal
 
@@ -177,8 +180,7 @@ else:
 
     new_array = array([[max_elem if i == j and matrix[i][j] == max_elem else matrix[i][j] / max_elem for i in range(size)] for j in range(size)])
     print("New matrix:\n", array([['%.2f' % elem for elem in a] for a in new_array]))
-
-  ```
+```
 </details>
 
 <h3 align="center">Lab 4</h3> 
@@ -186,8 +188,9 @@ Create a dictionary with keys - the names of the continents of our planet. The v
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
- continents = {
+
+```python
+continents = {
     "Asia":
         {'Japan': ("Tokyo", 377975, 125620000)},
     "Europe":
@@ -216,7 +219,7 @@ else:
         print("Continent: ", i,
               "Area: ", info[1], "km²",
               "Population: ", info[2])
-  ```
+```
 </details>
 
 <h3 align="center">Lab 5</h3> 
@@ -224,7 +227,8 @@ Create a class that describes the continent. The class must contain the name of 
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
+
+```python
 earth = {
     "Asia":
         {'Japan': ("Tokyo", 377975, 125620000)},
@@ -278,8 +282,7 @@ if input_str.title() in earth.keys():
     Earth(input_str).print_continent()
 else:
     print(Earth(continent=None).print_country(input_str))
-
-  ```
+```
 </details>
 
 <h3 align="center">Lab 6</h3> 
@@ -287,7 +290,8 @@ Read the file "27.txt" and divide it into 2 files "271.txt", "272.txt", which co
 
 <details>
   <summary>Solution</summary><p align="left">
-  ```python
+
+```python
 try:
     text, add_text = open("27.txt", "r"), open("27.txt", "r")
     text_symbols = list(text.read())
@@ -299,6 +303,6 @@ try:
     with open("273.txt", "w", encoding='cp1251') as output: output.write(" ".join(intersection_symbol))
     with open("274.txt", "w", encoding='utf-8') as output: output.write(" ".join(set(add_text.read().lower()) - intersection_symbol))
 except IOError: print("Error: File does not exist.")
-  ```
+```
 </details>
 

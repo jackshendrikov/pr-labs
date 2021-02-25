@@ -18,4 +18,3 @@ else:
 
     print("New List: ", list(map(lambda x: x, b)), '\n' + '-'*50)
     print('Sum of elements in list - ', sum(b))
-
